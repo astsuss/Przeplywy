@@ -1,0 +1,7 @@
+name: test
+on: push
+jobs:
+  main: 
+    runs-on: uubuntu-latest 
+    steps:
+      - run: python -c 'print("Hello world")'
