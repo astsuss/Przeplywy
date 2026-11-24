@@ -6,7 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
-      - run: pip install nbformat
-      - run: pip install nbclient
-      - run: pip install python3
+      - run: pip install nbformat ipykernel
       - run: quarto render euler.ipynb --execute --to pdf
