@@ -4,9 +4,9 @@ jobs:
   main: 
     runs-on: ubuntu-latest 
     steps:
+      - run: pip install nbformat ipykernel
       - uses: actions/checkout@v7
       - uses: quarto-dev/quarto-actions/setup@v2
-      - run: pip install nbformat ipykernel
-      - run: pip install nbclient
-      - run: quarto install tinytex
+        with:
+          tinytex: True
       - run: quarto render euler.ipynb --execute --to pdf
