@@ -1,7 +1,9 @@
-name: test
+name: euler_test
 on: push
 jobs:
   main: 
     runs-on: ubuntu-latest 
     steps:
-      - run: python -c 'print("Hello world")'
+      - uses: actions/checkout@v7
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: quarto render euler.ipynb --execute --to pdf
