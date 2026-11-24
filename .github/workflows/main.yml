@@ -8,4 +8,5 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
       - run: pip install nbformat
       - run: pip install nbclient
+      - run: pip install python3
       - run: quarto render euler.ipynb --execute --to pdf
