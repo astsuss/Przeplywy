@@ -12,5 +12,5 @@ jobs:
       - run: quarto render euler.ipynb --execute --to pdf
       - uses: actions/upload-artifact@v7
         with:
-          path: raport.pdf
+          path: euler.pdf
           arcive: false
